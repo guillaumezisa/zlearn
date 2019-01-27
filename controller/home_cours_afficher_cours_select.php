@@ -51,14 +51,18 @@
           </div><br><br>";
           $req_select_commentaire ="SELECT * FROM cours_commentaires WHERE id_cours ='".$cours[$i][0]."'";
           $select_commentaire = $bdd_connexion->query($req_select_commentaire)->fetchAll();
-          for ($i=count($select_commentaire)-1; $i != 0 ; $i--) {
-            echo "<textarea class='form-control' rows='2' name='commentaire' value=''>";
-            echo "[".$select_commentaire[$i][6]."]";
-            $req_select_utilisateur = "SELECT pseudo FROM utilisateurs WHERE id_utilisateur='".$select_commentaire[$i][1]."'";
-            $select_utilisateur= $bdd_connexion->query($req_select_utilisateur)->fetch();
-            echo " ".$select_utilisateur[0]." :";
-            echo " ".$select_commentaire[$i][5];
-            echo "</textarea>";
+          if (count($select_commentaire) == 0 ){
+            echo("Il n'y a actuellement aucun commentaire.");
+          } else {
+            for ($y=count($select_commentaire)-1; $y >= 0 ; $y--) {
+              echo "<textarea class='form-control' rows='2' name='commentaire' value=''>";
+              $req_select_utilisateur = "SELECT pseudo FROM utilisateurs WHERE id_utilisateur='".$select_commentaire[$y][1]."'";
+              $select_utilisateur= $bdd_connexion->query($req_select_utilisateur)->fetch();
+              echo "[ ".$select_commentaire[$y][6]." ]";
+              echo " ".$select_utilisateur[0]." :";
+              echo $select_commentaire[$y][5];
+              echo "</textarea>";
+            }
           }
           echo "<br><svg height='25px'width='100%'>
             <line x1='0' y1='0' x2='2000' y2='0' style='stroke:rgb(255,0,0);stroke-width:2' />
