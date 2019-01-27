@@ -1,0 +1,121 @@
+@media (max-width: 640px) {
+.container {
+position: relative;
+bottom: 0;
+}
+}
+body {
+	background: url(../images/index_bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+	overflow-x: hidden;
+	overflow-y: auto;
+	width : 98.90%;
+	margin-left : 9px;
+	font-family : "ln";
+}
+h1 {
+	color : #BC2929;
+	opacity : 1;
+}
+#banniere {
+	font-size : 28px;
+	font-family : "ln";
+	color : #2D2B6D ;
+	background: url(../images/engrenage.jpg) no-repeat center center fixed;
+	opacity : 1;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+	border : 2px solid black;
+	border-radius :7px;
+}
+
+.tableaubord {
+    display: inline-block;
+	 border : black solid 2px;
+	 background-color : red;
+}
+#bigbox {
+	display: -webkit-box;
+	display: -moz-box;
+	display: box;
+	-webkit-box-orient: inline-axis;
+	-moz-box-orient: inline-axis;
+	box-orient: inline-axis;
+	-webkit-box-pack: center;
+	-moz-box-pack: center;
+	box-pack: center;
+	-webkit-box-direction: normal;
+	-moz-box-direction: normal;
+	box-direction: normal;
+	-webkit-box-align: stretch;
+	-moz-box-align: stretch;
+	box-align: stretch;
+	width:100%;
+}
+
+#box2 {
+
+	border : 1px solid black;
+	border-radius : 7px;
+	background-color : GREEN;
+	font-size : 20px;
+	background: url(../images/cadena.jpg) no-repeat ;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+	height : 100%;
+	width : 100%;
+}
+#box3 {
+	-webkit-box-ordinal-group: 1;
+	-moz-box-ordinal-group: 1;
+	box-ordinal-group: 1;
+
+	-webkit-box-flex: 3;
+	-moz-box-flex: 3;
+	box-flex: 3;
+	height : 350px;
+	margin-right : 2px;
+	border : 1px solid black;
+	border-radius : 7px;
+	background-color : YELLOW;
+	background: url(../images/techno.jpg) no-repeat ;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#success{
+	font-size: 16px;
+	color : green;
+}
+#error{
+	font-size: 16px;
+	color : red;
+}
+#boutons{
+	display : inline;
+}
+.button {
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+.button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
